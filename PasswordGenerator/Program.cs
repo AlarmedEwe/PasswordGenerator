@@ -1,4 +1,7 @@
-﻿string path = AppDomain.CurrentDomain.BaseDirectory + "/Languages";
+﻿using PasswordGenerator;
+using System.Text.Json;
+
+string path = AppDomain.CurrentDomain.BaseDirectory + "/Languages";
 
 Console.WriteLine("+---------------------+");
 Console.WriteLine("|-- Select language --|");
@@ -6,7 +9,7 @@ Console.WriteLine("|- en                -|");
 Console.WriteLine("|- pt-br             -|");
 Console.WriteLine("+---------------------+");
 
-string language = Console.ReadLine();
+string? language = Console.ReadLine();
 
 string json = language switch
 {
@@ -16,3 +19,7 @@ string json = language switch
 };
 
 Console.Clear();
+
+string[]? asks = JsonSerializer.Deserialize<string[]>(json);
+
+Password.Generate(asks ?? new string[0]);
