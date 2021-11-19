@@ -1,5 +1,12 @@
-[
-  "Qual o tamanho da sua senha?",
-  "Você deseja uma senha fraca, mediana ou forte?",
-  "Sua nova senha é: "
-]
+{
+	"Ask": {
+		"PasswordLength": "Qual o tamanho da sua senha?",
+		"PasswordStrength": "Você deseja uma senha fraca, mediana ou forte?",
+		"Response": "Sua nova senha é:"
+	},
+	"Strength": {
+		"Weak": "fraca",
+		"Medium": "mediana",
+		"Strength": "forte"
+	}
+}

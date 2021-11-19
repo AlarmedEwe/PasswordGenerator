@@ -1,4 +1,5 @@
 ﻿using PasswordGenerator;
+using PasswordGenerator.Models;
 using System.Text.Json;
 
 string path = AppDomain.CurrentDomain.BaseDirectory + "/Languages";
@@ -20,6 +21,7 @@ string json = language switch
 
 Console.Clear();
 
-string[]? asks = JsonSerializer.Deserialize<string[]>(json);
+Translator translator = JsonSerializer.Deserialize<Translator>(json) ?? new();
 
-Password.Generate(asks ?? new string[0]);
+Password password = new(translator);
+password.Generate();

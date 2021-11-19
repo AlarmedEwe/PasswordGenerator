@@ -1,5 +1,12 @@
-[
-  "What's the size for your password?",
-  "Do you wish a weak, medium or strength password?",
-  "Your new password is:"
-]
+{
+	"Ask": {
+		"PasswordLength": "What's the size for your password?",
+		"PasswordStrength": "Do you wish a weak, medium or strength password?",
+		"Response": "Your new password is:"
+	},
+  "Strength": {
+    "Weak": "weak",
+    "Medium": "medium",
+    "Strength": "strength"
+  }
+}
