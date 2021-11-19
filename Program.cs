@@ -25,3 +25,6 @@ Translator translator = JsonSerializer.Deserialize<Translator>(json) ?? new();
 
 Password password = new(translator);
 password.Generate();
+
+Console.WriteLine("\nPressione [ENTER] para sair...");
+Console.ReadLine();
