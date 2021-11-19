@@ -1,14 +1,14 @@
 using System.Text;
 using PasswordGenerator.Models;
 
-namespace PasswordGenerator;
+namespace PasswordGenerator.Controllers;
 
-public class Password
+public class PasswordController
 {
   private Ask Ask { get; set; } = new();
   private Strengthness Strength { get; set; } = new();
 
-  public Password(Translator translator)
+  public PasswordController(Translator translator)
   {
     Ask = translator.Ask;
     Strength = translator.Strength;
